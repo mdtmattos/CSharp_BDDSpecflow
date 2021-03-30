@@ -22,9 +22,6 @@ namespace Test_BDDSpecflow.Steps
         public void DadoqueestounapaginaparaconsultarCEP()
         {
             driver = TestConfig.GetBrowserMobile(driver, ConfigurationManager.AppSettings["browser"]);//, ConfigurationManager.AppSettings["uri"]);
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-
         }
 
         [When(@"insiro um CEP válido")]
