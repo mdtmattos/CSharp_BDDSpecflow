@@ -58,6 +58,5 @@ namespace Test_BDDSpecflow.Steps
             cepPages.ValidarMensagemResultado();
             cepPages.FecharBrowser();
         }
-
     }
 }
