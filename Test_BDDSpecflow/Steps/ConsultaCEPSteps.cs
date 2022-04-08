@@ -1,11 +1,6 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
 using TechTalk.SpecFlow;
 using Test_BDDSpecflow.Pages;
-using Test_BDDSpecflow;
-using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium.Remote;
 using Test_BDDSpecflow.Util;
 using System.Configuration;
 
