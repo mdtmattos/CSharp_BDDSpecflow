@@ -17,7 +17,7 @@ namespace Test_BDDSpecflow.Util
     class TestConfig
     {
         #region Browser
-        public static RemoteWebDriver GetBrowserLocal(RemoteWebDriver driver, string browser)
+        public static IWebDriver GetBrowserLocal(IWebDriver driver, string browser)
         {
             switch (browser)
             {
@@ -38,7 +38,7 @@ namespace Test_BDDSpecflow.Util
             return driver;
         }
 
-        public static RemoteWebDriver GetBrowserRemote(RemoteWebDriver driver, string browser, string uri)
+        public static IWebDriver GetBrowserRemote(IWebDriver driver, string browser, string uri)
         {
             switch (browser)
             {
@@ -63,7 +63,7 @@ namespace Test_BDDSpecflow.Util
             }
             return driver;
         }
-        public static RemoteWebDriver GetBrowserMobile(RemoteWebDriver driver, string browser)
+        public static IWebDriver GetBrowserMobile(IWebDriver driver, string browser)
         {
             switch (browser)
             {
@@ -96,7 +96,9 @@ namespace Test_BDDSpecflow.Util
                     driver.Manage().Window.Maximize();
                     break;
                 case "Edge":
-                    driver = new EdgeDriver();
+                    EdgeOptions edgeoptions = new EdgeOptions();
+                    driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), edgeoptions);
+                    driver.Navigate().GoToUrl("https://buscacepinter.correios.com.br/app/endereco/index.php");
                     driver.Manage().Window.Maximize();
                     break;
                 default:
@@ -112,7 +114,7 @@ namespace Test_BDDSpecflow.Util
         #endregion
 
         #region JavaScript
-        public static void ExecuteJavaScript(RemoteWebDriver driver, string script)
+        public static void ExecuteJavaScript(IWebDriver driver, string script)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript(script);

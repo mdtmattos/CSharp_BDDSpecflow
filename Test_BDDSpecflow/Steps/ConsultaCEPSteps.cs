@@ -15,13 +15,13 @@ namespace Test_BDDSpecflow.Steps
     public class ConsultaCEPSteps
     {
         //Anti-Context
-        public RemoteWebDriver driver;
+        public IWebDriver driver;
        
         //Step Definitions
         [Given(@"que estou na pagina para consultar CEP")]
         public void DadoqueestounapaginaparaconsultarCEP()
         {
-            driver = TestConfig.GetBrowserMobile(driver, ConfigurationManager.AppSettings["browser"]);//, ConfigurationManager.AppSettings["uri"]);
+            driver = TestConfig.GetBrowserLocal(driver, ConfigurationManager.AppSettings["browser"]);//, ConfigurationManager.AppSettings["uri"]);
         }
 
         [When(@"insiro um CEP válido")]

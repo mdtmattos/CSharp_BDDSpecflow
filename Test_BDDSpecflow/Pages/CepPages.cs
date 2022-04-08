@@ -10,7 +10,7 @@ namespace Test_BDDSpecflow.Pages
 {
     public class CepPages
     {
-        public RemoteWebDriver driver;
+        public IWebDriver driver;
         //Elementos
         public IWebElement endereco => driver.FindElement(By.Id("endereco"));
         public IWebElement btnBuscar => driver.FindElement(By.Id("btn_pesquisar"));
@@ -19,7 +19,7 @@ namespace Test_BDDSpecflow.Pages
         public IWebElement mensagemresultado => driver.FindElement(By.Id("mensagem-resultado"));
 
         //Metodos
-        public CepPages(RemoteWebDriver driver) => this.driver = driver;
+        public CepPages(IWebDriver driver) => this.driver = driver;
         public void DigitarCEP(string cepValido = "80320-110") => endereco.SendKeys(cepValido);
         public void DigitarCEPInvalido(string cepInvalido = "8888888-110") => endereco.SendKeys(cepInvalido);
         public void ClicarBtnBuscar() => btnBuscar.Click();
