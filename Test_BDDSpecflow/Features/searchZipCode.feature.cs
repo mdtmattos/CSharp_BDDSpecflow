@@ -20,22 +20,22 @@ namespace Test_BDDSpecflow.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ConsultaCEP")]
-    public partial class ConsultaCEPFeature
+    [NUnit.Framework.DescriptionAttribute("Search by zip code")]
+    public partial class SearchByZipCodeFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "ConsultaCEP.feature"
+#line 1 "searchZipCode.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-BR"), "Features", "ConsultaCEP", "\tConsultar CEP", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Search by zip code", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,15 +74,15 @@ namespace Test_BDDSpecflow.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Consultar por CEP")]
+        [NUnit.Framework.DescriptionAttribute("Search by zip code")]
         [NUnit.Framework.CategoryAttribute("UrlCEP")]
-        public void ConsultarPorCEP()
+        public void SearchByZipCode()
         {
             string[] tagsOfScenario = new string[] {
                     "UrlCEP"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Consultar por CEP", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search by zip code", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -92,27 +92,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
- testRunner.Given("que estou na pagina para consultar CEP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line 5
+ testRunner.Given("I am on the page to check Zip code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 9
- testRunner.When("insiro um CEP válido", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line 6
+ testRunner.When("I enter a valid zip code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
- testRunner.Then("valido os dados do CEP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line 7
+ testRunner.Then("I validate the zip code data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Consultar por CEP inválido")]
-        public void ConsultarPorCEPInvalido()
+        [NUnit.Framework.DescriptionAttribute("Search by invalid zip code")]
+        public void SearchByInvalidZipCode()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Consultar por CEP inválido", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search by invalid zip code", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -122,14 +122,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 13
- testRunner.Given("que estou na pagina para consultar CEP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line 10
+ testRunner.Given("I am on the page to check Zip code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 14
- testRunner.When("insiro um CEP inválido", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line 11
+ testRunner.When("I enter a invalid zip code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 15
- testRunner.Then("valido a mensagem de retorno", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line 12
+ testRunner.Then("I validate the return message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
